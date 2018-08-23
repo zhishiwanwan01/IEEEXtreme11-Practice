@@ -1,2 +1,2 @@
-# IEEEXtreme11-Practice
-IEEEXtreme11 Practice in Python
+# IEEEXtreme11.0-Practice
+IEEEXtreme11.0 Practice in Python
