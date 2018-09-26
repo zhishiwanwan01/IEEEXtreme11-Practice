@@ -4,7 +4,7 @@ def parser():
         data = list(input().split(' '))
         for number in data:
             if len(number) > 0:
-                yield(number)
+                yield (number)
 
 
 input_parser = parser()
@@ -24,7 +24,6 @@ def get_number():
 
 
 def getSolutionNos(a, b, odd):
-
     n = 0
 
     if b == 0:
@@ -47,6 +46,8 @@ def getSolutionNos(a, b, odd):
 
 # numpy and scipy are available for use
 import numpy as np
+
+
 # import scipy
 
 
@@ -88,7 +89,7 @@ for i in range(len(pas_tri)):
     print('p=', p)
     n += p
 
-print(n % (10**9 + 7))
+print(n % (10 ** 9 + 7))
 # for x1 in range(c // b[0] + 1):
 #     for x2 in range(c // b[1] + 1):
 #         for x3 in range(c // b[2] + 1):
