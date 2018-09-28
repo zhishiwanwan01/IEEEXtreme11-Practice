@@ -1,7 +1,7 @@
 import numpy as np
 
-A = 5
-B = 15
+A = 1
+B = 10
 
 
 def prime_finder(N1, N2):
@@ -28,14 +28,15 @@ def diviTimes(N, i):
 
 
 def isOddDivisor(N, primeList):
-    threshold = int(np.sqrt(N))
+#    print('primeList:', primeList)
     if 1 in primeList:
         primeList.remove(1)
     myPrimeList = []
     for i in primeList:
-        if i > threshold:
+        if i > N:
             break
         myPrimeList.append(i)
+#    print('myPrimeList:', myPrimeList)
     for i in myPrimeList:
         if N % i != 0:
             continue
@@ -48,19 +49,14 @@ output = 0
 if A == B:
     if A != 1:
         primeList = prime_finder(1, B)
-#         print(primeList)
         if isOddDivisor(A, primeList):
             output += 1
 else:
     myList = list(range(A, B + 1))
-    print(myList)
-    primeList = prime_finder(A, B)
-    print(primeList)
+    primeList = prime_finder(1, B)
     for i in primeList:
         if i in myList:
-            # print(i)
             myList.remove(i)
-            # print(myList)
             continue
     for i in myList:
         if isOddDivisor(i, primeList):
@@ -71,6 +67,3 @@ if A == 1:
     output += 1
 
 print('output:', output)
-# print(prime_finder(2, 10))
-# print(myList)
-print(isOddDivisor(6, primeList))
